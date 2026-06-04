@@ -82,7 +82,7 @@
     },
 
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
+        "format": "{icon} {volume}%",
         "format-bluetooth": "{icon} {volume}%  {format_source}",
         "format-bluetooth-muted": "󰸈 {icon} {volume}%  {format_source}",
         "format-muted": "󰸈 ",
@@ -120,7 +120,7 @@
         "tooltip-format-disconnected": "󰌙 Disconnected",
         "max-length": 30,
         "format-icons": [
-            "󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "
+            "󰤯", "󰤟", "󰤢", "󰤥", "󰤨"
         ],
         "on-click": "nm-connection-editor"
         
@@ -143,12 +143,12 @@
         ]
     },
     "cpu": {
-        "format": "  {usage}%",
+        "format": " {usage}%",
         "tooltip": true,
         "on-click": "alacritty -e htop"
     },
     "memory": {
-        "format": "  {used}GiB",
+        "format": " {used}GiB",
 		"tooltip": true,
     },
     "temperature": {
@@ -169,15 +169,15 @@
             "critical": 10
         },
         "on-click-middle": "acpi -i",
-        "format": "{icon}  {capacity}%",
-        "format-full": "{icon}  {capacity}%",
-        "format-charging": "\udb80\udc84  {capacity}%",
-        "format-plugged": "  {capacity}%",
-        "format-alt": "{time}  {icon}",
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": "\udb80\udc84 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""]        
     },
     "clock": {
-        "format": "{:%H:%M} ",
+        "format": "{:%H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%d-%m-%Y}"
     },
