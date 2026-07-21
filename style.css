@@ -1,23 +1,33 @@
-@import "mocha.css";
+@import "tokens/colors.css";
+
 * {
-    /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
-    font-family: "SpaceMono Nerd Font";
-    font-size: 12pt;
+  margin: 0;
+  padding: 0;
+  min-height: 0px;
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font";
 }
 
 window#waybar {
-    background: transparent;
-    color: @teal;
-    border-radius: 7px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: @teal;
+  background: transparent;
+  color: @on_surface;
 }
 
 window#waybar.empty #window {
-    background-color: transparent;
-    padding: 0 10px;
-    border: 0px;
+  background-color: transparent;
+  padding: 0 10px;
+}
+
+tooltip {
+  background-color: @surface_container;
+  border: 1px solid @surface_container_highest;
+  border-radius: 12px;
+}
+
+tooltip label {
+  padding: 8px 10px;
+  color: @secondary_fixed_dim;
 }
 
 #clock,
@@ -38,15 +48,18 @@ window#waybar.empty #window {
 #scratchpad,
 #power-profiles-daemon,
 #language,
+#mpris,
+#custom-arch,
+#custom-search,
+#custom-swaync,
+#custom-power,
 #mpd {
-	background-color: transparent;
-    padding: 0 10px;
-    border-radius: 7rem;
-    /*border-width: 2px;
-    border-style: solid;
-    border-color: @teal;*/
+  margin: 4px 5px;
+  padding: 6px 12px;
+  background-color: @surface_container;
+  border-radius: 20px;
+  color: @secondary_fixed_dim;
 }
-
 
 #clock:hover,
 #battery:hover,
@@ -60,191 +73,190 @@ window#waybar.empty #window {
 #wireplumber:hover,
 #custom-media:hover,
 #tray:hover,
-#mode:hover,
 #bluetooth:hover,
+#mode:hover,
 #idle_inhibitor:hover,
 #scratchpad:hover,
 #power-profiles-daemon:hover,
 #language:hover,
-#mpd:hover {
-    background-color: @maroon;
-    color: @brown;
-}
-
-
-#workspaces {
-  border-radius: 7rem;
-  background-color: transparent;
-  /*border-width: 2px;
-  border-style: solid;
-  border-color: @teal;*/
-}
-
-#workspaces button {
-  color: @teal;
-  border-radius: 7rem;
-}
-
-#workspaces button.active {
-  color: @brown;
-  background-color: @teal;
-  border-radius: 7rem;
-}
-
-#workspaces button:hover {
-  color: @brown;
-  background-color: @maroon;
-  border-radius: 7rem;
+#mpris:hover,
+#custom-arch:hover,
+#custom-search:hover,
+#custom-swaync:hover,
+#custom-power:hover,
+#mpd:hover,
+#window:hover {
+  background-color: @surface_container_high;
 }
 
 #custom-arch {
-    margin-left: 5px;
-    padding-left: 10px;
-    padding-right: 14px;
-    font-size: 25px;
-    background-color: transparent;
-    border-radius: 7rem;
-	/*border-width: 2px;
-	border-style: solid;
-	border-color: @teal;*/
+  color: @primary;
+  font-size: 20px;
+  padding: 6px 15px 6px 10px;
 }
-#custom-arch:hover {
-    background-color: @maroon;
-    color: @brown;
+
+#power-profiles-daemon,
+#idle_inhibitor {
+  padding: 6px 15px 6px 10px;
 }
-#custom-search {
-    padding: 0 10px;
-    font-size: 20px;
-    background-color: transparent;
-    border-radius: 7rem;
-	/*border-width: 2px;
-	border-style: solid;
-	border-color: @teal;*/
+
+#idle_inhibitor {
+  min-width: 18px;
+  padding: 6px 16px 6px 10px;
 }
-#custom-search:hover {
-    background-color: @maroon;
-    color: @brown;
+
+#cpu,
+#memory,
+#temperature,
+#bluetooth,
+#language,
+#backlight {
+  padding: 6px 10px;
 }
-#custom-swaync {
-    padding: 0 10px;
-    background-color: transparent;
-    border-radius: 7rem;
-    /*border-width: 2px;
-	border-style: solid;
-	border-color: @teal;*/
+
+#network {
+  padding: 6px 10px 6px 8px;
 }
-#custom-swaync:hover {
-    background-color: @maroon;
-    color: @brown;
+
+#tray {
+  padding: 6px 10px;
 }
+
 #custom-power {
-    margin-right: 5px;
-    padding: 0 10px;
-    background-color: transparent;
-    border-radius: 7rem;
-    /*border-width: 2px;
-	border-style: solid;
-	border-color: @teal;*/
-}
-#custom-power:hover {
-    background-color: @maroon;
-    color: @brown;
-}
-/*
-#taskbar {
+  color: @primary;
+  padding: 6px 14px;
 }
 
-#taskbar button {
-	border-radius: 7rem;
-	background: transparent;
-	border-width: 2px;
-	border-style: solid;
-	border-color: @teal;
-	margin-left: 2px;
-	margin-right: 2px;
-	padding-left: 8px;
-	padding-right: 8px;
-	color: @text;
+#custom-swaync,
+#custom-search,
+#custom-media,
+#mpris,
+#mpd {
+  padding: 6px 12px;
 }
 
-#taskbar button.active {
-	border-radius: 7rem;
-	background-color: @surface0;
-	border-width: 2px;
-	border-style: solid;
-	border-color: @teal;
-}
-*/
-
-
-  #window {
-  border-radius: 7rem;
-  /*border-width: 2px;
-  border-style: solid;
-  border-color: @teal;*/
-  padding: 0 10px;
-  background-color: transparent;
-  color: @teal;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-#window:hover {
-    background-color: @maroon;
-    color: @brown;
-}
-#pulseaudio-slider slider {
-	min-width: 0px;
-	min-height: 0px;
-	opacity: 0;
-	background-image: none;
-	border: none;
-	box-shadow: none;
+#clock {
+  padding: 6px 10px;
 }
 
-#pulseaudio-slider trough {
-	min-width: 80px;
-	min-height: 5px;
-	border-radius: 5px;
+#battery {
+  padding: 6px 16px;
 }
 
-#pulseaudio-slider highlight {
-	min-height: 10px;
-	border-radius: 5px;
+#workspaces {
+  margin: 4px 5px;
+  padding: 6px 6px;
+  background-color: @surface_container;
+  border-radius: 20px;
 }
 
+#workspaces button {
+  min-width: 32px;
+  padding: 0 4px;
+  margin: 0 2px;
+  background: transparent;
+  border-radius: 16px;
+  color: @tertiary;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#workspaces button.active {
+  padding: 0 12px;
+  margin: 0 2px;
+  background-color: @primary;
+  color: @on_primary;
+}
+
+#workspaces button.special {
+  color: @tertiary_fixed;
+}
+
+#workspaces button:hover {
+  background-color: @surface_container_highest;
+  color: @primary;
+}
+
+#workspaces button.active:hover {
+  background-color: @primary;
+  color: @on_primary;
+}
+
+#workspaces button.empty {
+  color: @outline_variant;
+}
+
+#workspaces button.urgent {
+  color: @error_container;
+}
+
+#tray>.passive,
+#tray>.active,
+#tray>.needs-attention {
+  -gtk-icon-effect: none;
+}
+
+#battery.charging,
+#power-profiles-daemon.power-saver {
+  color: #a6e3a1;
+}
+
+#idle_inhibitor.activated,
+#cpu.warning,
+#disk.warning,
+#memory.warning,
+#battery.warning:not(.charging) {
+  color: #f9e2af;
+}
+
+#network.disabled,
+#cpu.critical,
+#disk.critical,
+#memory.critical,
+#temperature.critical,
+#battery.critical:not(.charging),
+#power-profiles-daemon.performance {
+  color: #f38ba8;
+}
+
+#pulseaudio.muted,
+#pulseaudio.source-muted,
+#network.disconnected,
+#bluetooth.disabled {
+  color: @outline;
+}
+
+#window {
+  margin: 4px 5px;
+  padding: 6px 12px;
+  background-color: @surface_container;
+  border-radius: 20px;
+  color: @secondary_fixed_dim;
+}
+
+#pulseaudio-slider slider,
 #backlight-slider slider {
-	min-width: 0px;
-	min-height: 0px;
-	opacity: 0;
-	background-image: none;
-	border: none;
-	box-shadow: none;
+  min-height: 12px;
+  min-width: 12px;
+  margin: -2px 0;
+  border-radius: 100%;
+  background-color: @primary;
 }
 
+#pulseaudio-slider trough,
 #backlight-slider trough {
-	min-width: 80px;
-	min-height: 10px;
-	border-radius: 5px;
+  min-width: 80px;
+  min-height: 10px;
+  border-radius: 10px;
+  background-color: @outline_variant;
 }
 
+#pulseaudio-slider highlight,
 #backlight-slider highlight {
-	min-width: 10px;
-	border-radius: 5px;
-}
-
-#mpris {
-	border-radius: 7rem;
-	background-color: transparent;
-	padding: 0 10px;
-	/*border-width: 2px;
-	border-style: solid;
-	border-color: @teal;*/
-}
-#mpris:hover {
-    background-color: @maroon;
-    color: @brown;
+  min-height: 10px;
+  border-radius: 10px;
+  background-color: @secondary_fixed_dim;
 }
 
 #custom-cava_mviz {
-	color: @pink;
+  color: #f5c2e7;
 }
