@@ -23,6 +23,7 @@
         //"hyprland/window"
     ],
     "modules-center": [
+        "hyprland/submap",
         "hyprland/workspaces"
     ],
     "modules-right": [
@@ -40,8 +41,7 @@
         "custom/power"
     ],
     //Modules configuration
-    
     "include": [
-		"~/.config/waybar/modules.json"
-	]
+        "~/.config/waybar/modules.jsonc"
+    ]
 }

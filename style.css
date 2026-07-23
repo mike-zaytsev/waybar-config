@@ -49,6 +49,7 @@ tooltip label {
 #power-profiles-daemon,
 #language,
 #mpris,
+#submap,
 #custom-arch,
 #custom-search,
 #custom-swaync,
@@ -80,6 +81,7 @@ tooltip label {
 #power-profiles-daemon:hover,
 #language:hover,
 #mpris:hover,
+#submap:hover,
 #custom-arch:hover,
 #custom-search:hover,
 #custom-swaync:hover,
@@ -137,6 +139,16 @@ tooltip label {
 
 #clock {
   padding: 6px 10px;
+}
+
+#submap {
+  background-color: #e06c75;
+  color: #1e222a;
+  font-weight: 700;
+}
+
+#submap:hover {
+  color: #1e222a;
 }
 
 #battery {

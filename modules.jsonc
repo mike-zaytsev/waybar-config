@@ -22,6 +22,7 @@
         "disable-scroll": false,
         "all-outputs": true,
         "warp-on-scroll": true,
+        "on-click": "activate",
         "format": "{name}",
         "format-icons": {
             "urgent": "",
@@ -29,6 +30,13 @@
             "default": "",
         "exec": "hyprctl clients -w -f"
         }
+    },
+
+    "hyprland/submap": {
+        "format": "{} mode",
+        "always-on": false,
+        "tooltip": true,
+        "tooltip-format": "h/j/k/l or arrows resize, Enter/Esc exits"
     },
 
  /*
